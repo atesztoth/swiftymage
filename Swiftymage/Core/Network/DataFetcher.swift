@@ -25,7 +25,9 @@ protocol FetchAutoParsable {
     
 }
 
-class DataFetcher {
+class DataFetcher: Service {
+    
+    public static let name = "DataFetcher"
     
     public static let sharedInstance = DataFetcher()
     
