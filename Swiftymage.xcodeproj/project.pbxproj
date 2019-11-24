@@ -24,6 +24,7 @@
 		D062109C236752F1003E3E74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D062109A236752F1003E3E74 /* LaunchScreen.storyboard */; };
 		D06210A7236752F2003E3E74 /* SwiftymageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06210A6236752F2003E3E74 /* SwiftymageTests.swift */; };
 		D06210B2236752F2003E3E74 /* SwiftymageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06210B1236752F2003E3E74 /* SwiftymageUITests.swift */; };
+		D09F8D5B238B2414004AEC1D /* Viper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09F8D5A238B2414004AEC1D /* Viper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		D06210AD236752F2003E3E74 /* SwiftymageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftymageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06210B1236752F2003E3E74 /* SwiftymageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftymageUITests.swift; sourceTree = "<group>"; };
 		D06210B3236752F2003E3E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D09F8D5A238B2414004AEC1D /* Viper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				D02EFF552387FB210078F276 /* Entities */,
 				D02EFF542387FB1A0078F276 /* Network */,
 				D02EFF522387FB140078F276 /* Core.swift */,
+				D09F8D5A238B2414004AEC1D /* Viper.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			files = (
 				D02EFF4A2387F93F0078F276 /* MainPresenter.swift in Sources */,
 				D02EFF502387FA810078F276 /* MainView.swift in Sources */,
+				D09F8D5B238B2414004AEC1D /* Viper.swift in Sources */,
 				D02EFF4E2387FA680078F276 /* MainRouter.swift in Sources */,
 				D02EFF5C238812290078F276 /* FetchAutoParsable.swift in Sources */,
 				D02EFF532387FB140078F276 /* Core.swift in Sources */,

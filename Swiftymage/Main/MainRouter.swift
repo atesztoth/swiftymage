@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+class MainRouter: Router {
+    var presenter: Presenter?
+    var view: View?
+}

@@ -13,7 +13,7 @@ protocol Service {
 }
 
 class Core {
-    private static let sharedInstance = Core()
+    public static let sharedInstance = Core()
     
     private let services: [String:Service] = [DataFetcher.name: DataFetcher.sharedInstance]
     
