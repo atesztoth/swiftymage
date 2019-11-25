@@ -33,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    // todo: core data must go from here. This has no business to do in the AppDelegate.
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
