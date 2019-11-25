@@ -13,7 +13,7 @@ protocol ViperView: class {
 }
 
 protocol Presenter: class {
-    var router: Router { get } // weak
+    var router: Router { get set } // weak
     var interactor: Interactor { get }
     var view: ViperView? { get set } // weak
 }
@@ -25,5 +25,5 @@ protocol Interactor: class {
 
 protocol Router: class {
     var presenter: Presenter? { get } // weak
-    var view: ViperView { get }
+    var view: ViperView { get set }
 }

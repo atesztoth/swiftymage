@@ -10,10 +10,11 @@ import Foundation
 
 class MainRouter: Router {
     // MARK: Properties
-    var presenter: Presenter?
+    weak var presenter: Presenter?
     var view: ViperView
     
     init() {
         view = MainView()
+        self.presenter = view.presenter
     }
 }
