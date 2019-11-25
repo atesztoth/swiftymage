@@ -25,6 +25,9 @@
 		D06210A7236752F2003E3E74 /* SwiftymageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06210A6236752F2003E3E74 /* SwiftymageTests.swift */; };
 		D06210B2236752F2003E3E74 /* SwiftymageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06210B1236752F2003E3E74 /* SwiftymageUITests.swift */; };
 		D09F8D5B238B2414004AEC1D /* Viper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09F8D5A238B2414004AEC1D /* Viper.swift */; };
+		D0F6B078238C826700C1BDD5 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6B077238C826700C1BDD5 /* CircleImage.swift */; };
+		D0F6B07A238C851B00C1BDD5 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6B079238C851B00C1BDD5 /* MapView.swift */; };
+		D0F6B07D238C8DCA00C1BDD5 /* AnnotationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6B07C238C8DCA00C1BDD5 /* AnnotationFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		D06210B1236752F2003E3E74 /* SwiftymageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftymageUITests.swift; sourceTree = "<group>"; };
 		D06210B3236752F2003E3E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D09F8D5A238B2414004AEC1D /* Viper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viper.swift; sourceTree = "<group>"; };
+		D0F6B077238C826700C1BDD5 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		D0F6B079238C851B00C1BDD5 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		D0F6B07C238C8DCA00C1BDD5 /* AnnotationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,7 @@
 				D02EFF5A2388121C0078F276 /* Extensions */,
 				D02EFF552387FB210078F276 /* Entities */,
 				D02EFF542387FB1A0078F276 /* Network */,
+				D0F6B07B238C8DAA00C1BDD5 /* Util */,
 				D02EFF522387FB140078F276 /* Core.swift */,
 				D09F8D5A238B2414004AEC1D /* Viper.swift */,
 			);
@@ -166,6 +173,7 @@
 		D062108B236752EC003E3E74 /* Swiftymage */ = {
 			isa = PBXGroup;
 			children = (
+				D0F6B076238C825600C1BDD5 /* CustomViews */,
 				D02EFF512387FAFD0078F276 /* Core */,
 				D02EFF482387F92A0078F276 /* Main */,
 				D062108C236752EC003E3E74 /* AppDelegate.swift */,
@@ -204,6 +212,23 @@
 				D06210B3236752F2003E3E74 /* Info.plist */,
 			);
 			path = SwiftymageUITests;
+			sourceTree = "<group>";
+		};
+		D0F6B076238C825600C1BDD5 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				D0F6B077238C826700C1BDD5 /* CircleImage.swift */,
+				D0F6B079238C851B00C1BDD5 /* MapView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		D0F6B07B238C8DAA00C1BDD5 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D0F6B07C238C8DCA00C1BDD5 /* AnnotationFactory.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,9 +365,12 @@
 				D02EFF4A2387F93F0078F276 /* MainPresenter.swift in Sources */,
 				D02EFF502387FA810078F276 /* MainView.swift in Sources */,
 				D09F8D5B238B2414004AEC1D /* Viper.swift in Sources */,
+				D0F6B078238C826700C1BDD5 /* CircleImage.swift in Sources */,
 				D02EFF4E2387FA680078F276 /* MainRouter.swift in Sources */,
+				D0F6B07D238C8DCA00C1BDD5 /* AnnotationFactory.swift in Sources */,
 				D02EFF5C238812290078F276 /* FetchAutoParsable.swift in Sources */,
 				D02EFF532387FB140078F276 /* Core.swift in Sources */,
+				D0F6B07A238C851B00C1BDD5 /* MapView.swift in Sources */,
 				D0621092236752EC003E3E74 /* Swiftymage.xcdatamodeld in Sources */,
 				D062108D236752EC003E3E74 /* AppDelegate.swift in Sources */,
 				D0621094236752EC003E3E74 /* ContentView.swift in Sources */,
