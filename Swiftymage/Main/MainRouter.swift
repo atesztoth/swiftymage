@@ -9,6 +9,11 @@
 import Foundation
 
 class MainRouter: Router {
+    // MARK: Properties
     var presenter: Presenter?
-    var view: View?
+    var view: ViperView
+    
+    init() {
+        view = MainView()
+    }
 }

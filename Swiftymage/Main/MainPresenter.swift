@@ -16,6 +16,7 @@ class MainPresenter: Presenter {
     // first version
     init() {
         interactor = MainInteractor()
+        interactor.presenter = self
         router = MainRouter()
     }
     
