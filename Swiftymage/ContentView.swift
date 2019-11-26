@@ -15,7 +15,7 @@ struct ContentView: View, ViperView {
     
     @State private var catImage = CircleImage(imageName: "Catioso")
     
-    @State private var tick = true
+    @State private var userInteractionEnabled = true
     
     var body: some View {
         VStack {
@@ -37,6 +37,8 @@ struct ContentView: View, ViperView {
                     Text("catstruction 🏗")
                 }
                 Button (action: {
+                    self.userInteractionEnabled.toggle()
+                    
                     (self.presenter as? MainPresenter)?.fetchAnImage { (res: UIImage?, error: Error?) in
                         guard let img = res, error == nil else {
                             print("error: \(error.debugDescription)")
@@ -44,10 +46,11 @@ struct ContentView: View, ViperView {
                         }
                         
                         self.catImage = CircleImage(injectedImage: Image(uiImage: img))
+                        self.userInteractionEnabled.toggle()
                     }
                 }) {
                     Text("Update the image!")
-                }
+                }.disabled(!self.userInteractionEnabled)
             }
             .padding()
             
