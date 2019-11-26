@@ -15,6 +15,8 @@ struct ContentView: View, ViperView {
     
     @State private var catImage = CircleImage(imageName: "Catioso")
     
+    @State private var tick = true
+    
     var body: some View {
         VStack {
             MapView(latitude: 47.959102, longitude: 21.711539, title: "Blues Cafe", subtitle: "Best IPA place")
@@ -40,6 +42,7 @@ struct ContentView: View, ViperView {
                             print("error: \(error.debugDescription)")
                             return
                         }
+                        
                         self.catImage = CircleImage(injectedImage: Image(uiImage: img))
                     }
                 }) {
