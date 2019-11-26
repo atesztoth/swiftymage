@@ -25,6 +25,7 @@ protocol FetchAutoParsable {
     
 }
 
+// todo: add cache policy
 class DataFetcher: Service {
     
     public static let name = "DataFetcher"
