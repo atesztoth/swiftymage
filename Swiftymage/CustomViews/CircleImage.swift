@@ -10,9 +10,21 @@ import SwiftUI
 
 struct CircleImage: View {
     var imageName: String?
+    var injectedImage: Image?
+    
+    private func determineImage() -> Image {
+        switch (imageName, injectedImage) {
+        case let (.some(fixName), _):
+            return Image(fixName)
+        case let (_, .some(fixImage)):
+            return fixImage
+        default:
+            return Image("Catioso")
+        }
+    }
     
     var body: some View {
-        Image(imageName ?? "Catioso")
+        determineImage()
             .resizable()
             .scaledToFit()
             .clipShape(Circle())

@@ -10,27 +10,15 @@ import UIKit
 import Foundation
 
 class MainPresenter: Presenter {
-    var view: ViperView?
     var interactor: Interactor
-    var router: Router
     
     // first version
     init() {
         interactor = MainInteractor()
-        router = MainRouter()
-        interactor.presenter = self
     }
     
     // yes this multi-object handler passing is eeeeh...
-    func fetchAnImage() {
-        (interactor as? MainInteractor)?.fetchImage { [weak self] (image: UIImage?, error: Error?) in
-            guard let safeImage = image, error != nil else {
-                print("error while fetching image")
-                print("error: \(error.debugDescription)")
-                return
-            }
-            
-            (self?.view as? MainView)?.display(image: safeImage)
-        }
+    func fetchAnImage(handler: @escaping (UIImage?, Error?) -> ()) {
+        (interactor as? MainInteractor)?.fetchImage(handler: handler)
     }
 }
