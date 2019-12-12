@@ -25,6 +25,7 @@ protocol FetchAutoParsable {
     
 }
 
+// todo: add cache policy
 class DataFetcher: Service {
     
     public static let name = "DataFetcher"
@@ -61,7 +62,11 @@ class DataFetcher: Service {
     }
     
     private func fetch (from url: String, completionHandler: @escaping(Data?, Error?) -> ()) {
-        URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: { data, response, error in
+        let config = URLSessionConfiguration.default
+        config.requestCachePolicy = .reloadIgnoringLocalCacheData
+        config.urlCache = nil
+        
+        URLSession.init(configuration: config).dataTask(with: URL(string: url)!, completionHandler: { data, response, error in
             guard error == nil else {
                 completionHandler(nil, error)
                 return

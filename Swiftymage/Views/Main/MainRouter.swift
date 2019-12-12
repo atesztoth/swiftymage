@@ -10,11 +10,6 @@ import Foundation
 
 class MainRouter: Router {
     // MARK: Properties
+    var view: ViperView = ContentView()
     weak var presenter: Presenter?
-    var view: ViperView
-    
-    init() {
-        view = MainView()
-        self.presenter = view.presenter
-    }
 }

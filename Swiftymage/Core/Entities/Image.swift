@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Image {
+struct AbstractImage {
     
     let title: String
     let url: String
