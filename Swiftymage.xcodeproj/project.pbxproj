@@ -14,6 +14,8 @@
 		D02EFF572387FB2D0078F276 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02EFF562387FB2D0078F276 /* Image.swift */; };
 		D02EFF592387FB900078F276 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02EFF582387FB900078F276 /* DataFetcher.swift */; };
 		D02EFF5C238812290078F276 /* FetchAutoParsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02EFF5B238812290078F276 /* FetchAutoParsable.swift */; };
+		D05A8FDF23A2F18E005D060C /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05A8FDE23A2F18E005D060C /* FormView.swift */; };
+		D05A8FE123A2F527005D060C /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05A8FE023A2F527005D060C /* PickerView.swift */; };
 		D062108D236752EC003E3E74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D062108C236752EC003E3E74 /* AppDelegate.swift */; };
 		D062108F236752EC003E3E74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D062108E236752EC003E3E74 /* SceneDelegate.swift */; };
 		D0621092236752EC003E3E74 /* Swiftymage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0621090236752EC003E3E74 /* Swiftymage.xcdatamodeld */; };
@@ -54,6 +56,8 @@
 		D02EFF562387FB2D0078F276 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		D02EFF582387FB900078F276 /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
 		D02EFF5B238812290078F276 /* FetchAutoParsable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAutoParsable.swift; sourceTree = "<group>"; };
+		D05A8FDE23A2F18E005D060C /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		D05A8FE023A2F527005D060C /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		D0621089236752EC003E3E74 /* Swiftymage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiftymage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D062108C236752EC003E3E74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D062108E236752EC003E3E74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +151,25 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D05A8FDC23A2F16C005D060C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D05A8FDD23A2F17B005D060C /* SampleViews */,
+				D0F6B076238C825600C1BDD5 /* CustomViews */,
+				D02EFF482387F92A0078F276 /* Main */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D05A8FDD23A2F17B005D060C /* SampleViews */ = {
+			isa = PBXGroup;
+			children = (
+				D05A8FDE23A2F18E005D060C /* FormView.swift */,
+				D05A8FE023A2F527005D060C /* PickerView.swift */,
+			);
+			path = SampleViews;
+			sourceTree = "<group>";
+		};
 		D0621080236752EC003E3E74 = {
 			isa = PBXGroup;
 			children = (
@@ -170,9 +193,8 @@
 		D062108B236752EC003E3E74 /* Swiftymage */ = {
 			isa = PBXGroup;
 			children = (
-				D0F6B076238C825600C1BDD5 /* CustomViews */,
+				D05A8FDC23A2F16C005D060C /* Views */,
 				D02EFF512387FAFD0078F276 /* Core */,
-				D02EFF482387F92A0078F276 /* Main */,
 				D062108C236752EC003E3E74 /* AppDelegate.swift */,
 				D062108E236752EC003E3E74 /* SceneDelegate.swift */,
 				D0621093236752EC003E3E74 /* ContentView.swift */,
@@ -367,6 +389,8 @@
 				D02EFF5C238812290078F276 /* FetchAutoParsable.swift in Sources */,
 				D02EFF532387FB140078F276 /* Core.swift in Sources */,
 				D0F6B07A238C851B00C1BDD5 /* MapView.swift in Sources */,
+				D05A8FDF23A2F18E005D060C /* FormView.swift in Sources */,
+				D05A8FE123A2F527005D060C /* PickerView.swift in Sources */,
 				D0621092236752EC003E3E74 /* Swiftymage.xcdatamodeld in Sources */,
 				D062108D236752EC003E3E74 /* AppDelegate.swift in Sources */,
 				D0621094236752EC003E3E74 /* ContentView.swift in Sources */,
@@ -550,7 +574,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = atesztoth.Swiftymage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -570,7 +594,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = atesztoth.Swiftymage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
