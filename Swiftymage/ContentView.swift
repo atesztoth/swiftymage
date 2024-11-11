@@ -7,10 +7,55 @@
 //
 
 import SwiftUI
+import MapKit
 
-struct ContentView: View {
+struct ContentView: View, ViperView {
+    
+    internal let presenter: Presenter = MainPresenter()
+    
+    @State private var catImage = CircleImage(imageName: "Catioso")
+    
+    @State private var userInteractionEnabled = true
+    
     var body: some View {
-        Text("Don't look at me yet 😡")
+        VStack {
+            MapView(latitude: 47.959102, longitude: 21.711539, title: "Blues Cafe", subtitle: "Best IPA place")
+                .edgesIgnoringSafeArea(.top)
+                .frame(height: 200)
+            catImage
+                .frame(minWidth: 100, idealWidth: 150, maxWidth: 150, minHeight: 100, idealHeight: 150, maxHeight: 150, alignment: .center)
+                .offset(y: -85)
+                .padding(.bottom, -85)
+            VStack(alignment: .center, spacing: 10) {
+                Text("Don't look at me yet")
+                    .kerning(2)
+                    .font(.title)
+                    .multilineTextAlignment(.center)
+                HStack(alignment: .top, spacing: 8) {
+                    Text("I am under")
+                    Spacer()
+                    Text("catstruction 🏗")
+                }
+                Button (action: {
+                    self.userInteractionEnabled.toggle()
+                    
+                    (self.presenter as? MainPresenter)?.fetchAnImage { (res: UIImage?, error: Error?) in
+                        guard let img = res, error == nil else {
+                            print("error: \(error.debugDescription)")
+                            return
+                        }
+                        
+                        self.catImage = CircleImage(injectedImage: Image(uiImage: img))
+                        self.userInteractionEnabled.toggle()
+                    }
+                }) {
+                    Text("Update the image!")
+                }.disabled(!self.userInteractionEnabled)
+            }
+            .padding()
+            
+            Spacer()
+        }
     }
 }
 
